@@ -1,0 +1,82 @@
+.fotoPerfil{
+  position: fixed;
+  max-width: 6%;
+  min-width: 3%;
+  border-radius: 50%;
+  left: 0;
+  top:85;
+  right: 35;
+  margin: 15px;
+}
+.logoAP {
+  max-width: 10%;
+}
+.logo {
+  align-self: flex-start;
+}
+.nav-Redes {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--main-white);
+  transform: translateY(8px);
+  transform: translateX(2px);
+  text-shadow: 2px 2px 1px #161515;
+transition: transform 0.3s ease-out;
+margin-right: 1em;
+}
+
+.btn {
+  color: var(--main-white);
+  background-color: var(--main-red);
+  border-color: var(--main-white);
+}
+
+.nav {
+display: flex;
+justify-content: flex-end;
+position: fixed;
+top: 0;
+left: 25;
+width: 100%;
+background: var(--main-red);
+box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+z-index: 10;
+}
+
+.nav-list {
+display: flex;
+margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+.nav {
+  justify-content: right;
+}
+
+.nav-list {
+  margin: 0 1rem;
+}
+}
+
+.nav-list a {
+display: block;
+font-size: 1.5rem;
+padding: 2rem;
+}
+
+  /* unvisited link */
+  a:link {
+    color: var(--main-white);
+  }
+  /* visited link */
+  a:visited {
+    color: var(--main-white);
+  }
+  /* mouse over link */
+  a:hover {
+    color: var(--main-gray);
+  }
+  /* selected link */
+  a:active {
+    color: var(--main-gray);
+  }

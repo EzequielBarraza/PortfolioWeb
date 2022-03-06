@@ -1,0 +1,30 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { HeaderComponent } from './componentes/heaeder/header.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { Acerca_DeComponent } from './componentes/acerca_de/acerca_de.component';
+import { ExperienciaComponent} from './componentes/experiencia/experiencia.component';
+import { EducacionComponent} from './componentes/educacion/educacion.component';
+import { SkillsComponent} from './componentes/skills/skills.component';
+import { FooterComponent} from './componentes/footer/footer.component';
+import { BrowserModule } from '@angular/platform-browser';
+const routes: Routes = [
+  
+  {path: 'header', component: HeaderComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'acerca_de', component: Acerca_DeComponent},
+
+  {path: 'experiencia', component: ExperienciaComponent},
+  {path: 'educación', component: EducacionComponent},
+  {path: 'skills', component: SkillsComponent},
+  {path: 'footer', component: FooterComponent},
+  { path: '', redirectTo: 'acerca_de', pathMatch: 'full' },
+  { path: '**', redirectTo: 'acerca_de', pathMatch: 'full' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes), BrowserModule],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
