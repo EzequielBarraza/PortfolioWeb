@@ -9,7 +9,8 @@ import { EXPERIENCIA } from "./mock-experiencia";
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencias: Experiencia[] = EXPERIENCIA;
+  experiencia: Experiencia[] = EXPERIENCIA;
+ 
   title='Experiencia Laboral';
   
    
@@ -17,5 +18,7 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  toggleaddexperiencia(){
+    console.log("toggleaddexperiencia");
+  }
 }
