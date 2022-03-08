@@ -13,6 +13,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ExperienciaItemComponent } from './componentes/experiencia-item/experiencia-item.component';
 import { ButtonComponent } from './componentes/button/button.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { ButtonComponent } from './componentes/button/button.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule, ReactiveFormsModule
+    AppRoutingModule, FormsModule, ReactiveFormsModule, FontAwesomeModule
   ],
   providers: [AppComponent, LoginComponent],
   bootstrap: [AppComponent]
