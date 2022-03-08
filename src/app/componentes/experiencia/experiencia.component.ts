@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Experiencia} from "./Experiencia"
 import { EXPERIENCIA } from "./mock-experiencia";
-
+import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 
  @Component({
   selector: 'app-experiencia',
@@ -9,14 +9,16 @@ import { EXPERIENCIA } from "./mock-experiencia";
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencia: Experiencia[] = EXPERIENCIA;
+  experiencia: Experiencia[] = [];
  
   title='Experiencia Laboral';
   
    
-  constructor() { }
+  constructor(private datosPortfolioService: DatosPortfolioService) { }
 
   ngOnInit(): void {
+    //Like Promise
+    this.datosPortfolioService.getExperiencia().subscribe((experiencia) => (this.experiencia = experiencia));
   }
   toggleaddexperiencia(){
     console.log("toggleaddexperiencia");
