@@ -8,12 +8,14 @@ import { EDUCACION } from "./mock-educacion";
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-educacion :Educacion [] = EDUCACION;
+  educacion :Educacion [] = EDUCACION;
 title='Educación';
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+toggleaddeducacion(){
+  console.log("toggleaddeducacion");
+}
 }

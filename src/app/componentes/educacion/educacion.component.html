@@ -2,10 +2,15 @@
  
   <h2 class="educación-section-header">{{title}}</h2>
     <div>
-
-      <p *ngFor="let educacion of educacion">
-        {{educacion.titulo}}. {{educacion.instituto}}. {{educacion.expedicion}}</p>
-        <app-button color="var(--main-red)" text="Añadir Educación"></app-button>
+      <app-educacion-item
+      *ngFor="let educacion of educacion"
+      [educacion]="educacion"
+      ></app-educacion-item>
+      <app-button  
+color="var(--main-red)" 
+text="Añadir Educación"
+(btnClick)="toggleaddeducacion()"
+></app-button>
 </div>
 
 

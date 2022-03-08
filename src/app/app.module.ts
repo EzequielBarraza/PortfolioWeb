@@ -14,6 +14,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ExperienciaItemComponent } from './componentes/experiencia-item/experiencia-item.component';
 import { ButtonComponent } from './componentes/button/button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EducacionItemComponent } from './componentes/educacion-item/educacion-item.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     ExperienciaItemComponent,
     ButtonComponent,
+    EducacionItemComponent,
   
   ],
   imports: [
