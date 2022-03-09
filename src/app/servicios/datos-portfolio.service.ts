@@ -10,14 +10,16 @@ import {HttpClient, HttpHeaders, HttpHandler} from '@angular/common/http'
   providedIn: 'root'
 })
 export class DatosPortfolioService {
+  private apiUrledu ='http://localhost:5000/educacion';
+  private apiUrlexp ='http://localhost:5000/experiencia';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   getEducacion(): Observable<Educacion[]> {
-    const educacion = of(EDUCACION);
-    return educacion  
-  };
+    return this.http.get<Educacion[]>(this.apiUrledu);
+  }  
+  
   getExperiencia(): Observable<Experiencia[]> {
-    const experiencia = of(EXPERIENCIA);
-    return experiencia
-  };
-}
+    return this.http.get<Experiencia[]>(this.apiUrlexp);
+  }
+  }
+
