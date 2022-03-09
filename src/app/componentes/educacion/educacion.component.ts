@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Educacion} from "./Educacion"
-import { EDUCACION } from "./mock-educacion";
+
 
 import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 
@@ -11,7 +11,7 @@ import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 })
 export class EducacionComponent implements OnInit {
   educacion :Educacion [] = [];
-title='Educación';
+title: string ='Educación';
 
   constructor(
     private datosPortfolioService: DatosPortfolioService

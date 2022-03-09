@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Experiencia} from "./Experiencia"
-import { EXPERIENCIA } from "./mock-experiencia";
+import {Experiencia} from "./Experiencia";
 import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 
  @Component({
@@ -11,7 +10,7 @@ import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 export class ExperienciaComponent implements OnInit {
   experiencia: Experiencia[] = [];
  
-  title='Experiencia Laboral';
+  title: string ='Experiencia Laboral';
   
    
   constructor(private datosPortfolioService: DatosPortfolioService) { }

@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acerca_de.component.css']
 })
 export class Acerca_DeComponent implements OnInit {
-nombre= 'Hola Soy Ezequiel Barraza'
-acercaDe='Programador Web Full Stack'
+nombre: string = 'Hola Soy Ezequiel Barraza'
+acercaDe: string ='Programador Web Full Stack'
   constructor() { }
 
   ngOnInit(): void {

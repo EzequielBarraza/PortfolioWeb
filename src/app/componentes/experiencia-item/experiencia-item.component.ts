@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Experiencia} from "../experiencia/Experiencia";
 import { EXPERIENCIA } from "../experiencia/mock-experiencia";
-import {ButtonComponent} from "../button/button.component"
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-experiencia-item',

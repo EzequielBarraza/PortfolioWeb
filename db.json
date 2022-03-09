@@ -32,4 +32,13 @@
                 "titulo":"Bachiller en Economia y Gestión de las Organizaciones",
                 "instituto": "Instituto Don Quijote de la Mancha",
                 "expedicion":"Febrero 2006"}
-        ]}
+        ],
+        "skills":[{
+                "id": "1",
+                "skillA":"Responsabilidad"},
+               {"id": "2",
+               "skillB":"Resolución de Problemas"},
+               {"id": "3",
+               "skillC":"Diseño de Sistemas"
+              }
+       ]}
