@@ -4,7 +4,7 @@ import { EDUCACION } from "../componentes/educacion/mock-educacion";
 import {Experiencia} from "../componentes/experiencia/Experiencia";
 import { EXPERIENCIA } from "../componentes/experiencia/mock-experiencia";
 import { Observable, of } from 'rxjs';
-import {HttpClient, HttpHeaders} from '@angular/common/http'
+import {HttpClient, HttpHeaders, HttpHandler} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
