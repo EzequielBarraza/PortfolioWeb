@@ -21,5 +21,15 @@ export class DatosPortfolioService {
   getExperiencia(): Observable<Experiencia[]> {
     return this.http.get<Experiencia[]>(this.apiUrlexp);
   }
+  deleteEducacion(educacion: Educacion):Observable<Educacion> {
+    const url =`${this.apiUrledu}/${educacion.id}`
+    
+    return this.http.delete<Educacion>(url);
+  }
+  deleteExperiencia(experiencia: Experiencia):Observable<Experiencia> {
+    const url =`${this.apiUrlexp}/${experiencia.id}`
+    
+    return this.http.delete<Experiencia>(url);
+  }
   }
 

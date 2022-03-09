@@ -24,4 +24,12 @@ title='Educación';
 toggleaddeducacion(){
   console.log("toggleaddeducacion");
 }
+deleteEducacion(educacion: Educacion){
+  this.datosPortfolioService.deleteEducacion(educacion)
+  .subscribe(
+    () => (
+    this.educacion = this.educacion.filter((t) => {
+    return t.id !== educacion.id })
+  ))
+}
 }

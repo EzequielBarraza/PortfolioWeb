@@ -23,4 +23,12 @@ export class ExperienciaComponent implements OnInit {
   toggleaddexperiencia(){
     console.log("toggleaddexperiencia");
   }
+  deleteExperiencia(experiencia: Experiencia){
+    this.datosPortfolioService.deleteExperiencia(experiencia)
+    .subscribe(
+      () => (
+      this.experiencia = this.experiencia.filter((t) => {
+      return t.id !== experiencia.id })
+    ))
+  }
 }

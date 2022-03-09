@@ -4,6 +4,7 @@
  <app-experiencia-item
  *ngFor="let experiencia of experiencia"
       [experiencia]="experiencia"
+      (onDeleteExperiencia)="deleteExperiencia(experiencia)"
  ></app-experiencia-item>
  <app-button color=
     "var(--main-red)" 

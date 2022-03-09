@@ -20,7 +20,7 @@ export class EducacionItemComponent implements OnInit {
     console.log("toggleaddeducacion");
   }
   onDelete(educacion:Educacion){
-  
+    console.log(educacion);
     this.onDeleteEducacion.emit(educacion);
   }
 }

@@ -20,7 +20,7 @@ export class ExperienciaItemComponent implements OnInit {
     console.log("toggleaddexperiencia");
   }
   onDelete(experiencia:Experiencia){
-  
+  console.log("DELETE!");
     this.onDeleteExperiencia.emit(experiencia);
   }
 }

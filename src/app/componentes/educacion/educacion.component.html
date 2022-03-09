@@ -4,6 +4,7 @@
       <app-educacion-item
       *ngFor="let educacion of educacion"
       [educacion]="educacion"
+      (onDeleteEducacion)="deleteEducacion(educacion)"
       ></app-educacion-item>
       <app-button  
 color="var(--main-red)" 
