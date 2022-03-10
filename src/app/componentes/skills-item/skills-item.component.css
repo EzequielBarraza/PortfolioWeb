@@ -1,0 +1,10 @@
+
+
+.skills-grid {
+  display: grid;
+  width: 70%;
+  max-width: 1280px;
+  text-align: center;
+  padding: 1em 1em;
+  margin: 0 auto;
+}

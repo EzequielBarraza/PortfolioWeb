@@ -1,6 +1,4 @@
-export interface Skills {
+export interface Skill {
     id?: number,
-    skillA: string;
-    skillB: string;
-    skillC: string;
+    skill: string;      
 }

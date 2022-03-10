@@ -1,27 +1,26 @@
-.Skills-section {
+.skills-section {
   text-align: center;
   padding: 10rem 2rem;
   background: var(--main-grayDark);
   width: 100%;
   height: 90vh;
-  margin-top: 6em;
-  margin-bottom:-5em;
 }
 
-.Skills-section-header {
+.skills-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
+  margin-top: 2.5em;
+  margin-bottom: 2.0em;
   border-bottom: 0.2rem solid var(--main-white);
 }
 
-.Skills-grid {
+.skills-grid {
   display: grid;
   width: 70%;
   max-width: 1280px;
   text-align: center;
-  padding: 2em 2em;
+  padding: 1em 1em;
   margin: 0 auto;
 }
-
 
 
