@@ -8,6 +8,11 @@ import {HttpClient, HttpHeaders, HttpHandler} from '@angular/common/http'
 import {Skill} from "../componentes/skills/Skills";
 import { SKILL } from "../componentes/skills/mock-skills";
 
+const httpOptions = {
+  headers : new HttpHeaders ({
+    'Content-Type' : 'application/json'
+  })
+  }
 
 @Injectable({
   providedIn: 'root'
@@ -45,5 +50,9 @@ export class DatosPortfolioService {
     
     return this.http.delete<Skill>(url);
   }
+  addEducacion(educacion:Educacion): Observable<Educacion>{ 
+    return this.http.post<Educacion>(this.apiUrledu, educacion, httpOptions);
+  }
+  
   }
 

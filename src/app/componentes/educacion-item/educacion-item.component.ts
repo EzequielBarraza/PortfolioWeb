@@ -16,8 +16,8 @@ export class EducacionItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  toggleaddeducacion(){
-    console.log("toggleaddeducacion");
+  toggleAddEducacion(){
+    console.log("toggleaddEducacion");
   }
   onDelete(educacion:Educacion){
     console.log(educacion);

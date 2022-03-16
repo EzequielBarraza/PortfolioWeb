@@ -102,3 +102,38 @@ a:hover {
 a:active {
   color: var(--main-gray);
 }
+
+.form-control {
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  color: var(--main-SkyBlue);
+  
+}
+
+.form-control input {
+  
+  width: 80%;
+  height: 1em;
+  margin: 1em;
+  padding: 1em 0.5em;
+  font-size: 1em;
+}
+
+.add-form{
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  background-color: var(--main-grayDark);
+  color: var(--main-gray);
+}
+#add-educacion {
+  display:inline-block;
+  text-align: center;
+  background-color: var(--main-grayDark);
+  margin-left: auto;
+  margin-right: auto;
+}

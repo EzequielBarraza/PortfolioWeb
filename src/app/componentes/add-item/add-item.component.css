@@ -1,0 +1,10 @@
+
+.btn-block {
+    display: flex;
+    width: 25%;
+    background-color: var(--main-SkyBlue);
+}
+
+.form-control{
+    background-color: var(--main-grayDark);
+}

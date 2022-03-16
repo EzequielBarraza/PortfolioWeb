@@ -9,8 +9,11 @@
       <app-button  
 color="var(--main-SkyBlue)" 
 text="Añadir Educación"
-(btnClick)="toggleaddeducacion()"
+(btnClick)="toggleAddEducacion()"
 ></app-button>
+<app-add-item
+(onAddEducacion) = "addEducacion($event)"
+></app-add-item>
 </div>
 
 
