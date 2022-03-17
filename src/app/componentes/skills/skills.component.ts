@@ -18,8 +18,8 @@ title: string= 'Soft & Hard Skills';
   ngOnInit(): void {
     this.datosPortfolioService.getSkill().subscribe((skill) => (this.skill = skill));
   }
-  toggleaddskill(){
-    console.log("toggleaddskills");
+  toggleAddSkill(){
+    console.log("toggle add skill");
   }
   deleteSkill(skill: Skill){
     this.datosPortfolioService.deleteSkill(skill)
