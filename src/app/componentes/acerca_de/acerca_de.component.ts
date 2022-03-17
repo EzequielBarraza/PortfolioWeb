@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {AcercaDe} from "./AcercaDe"
+import {UiService} from 'src/app/servicios/ui.service'
+import { Subscription } from 'rxjs';
+import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
+
 
 @Component({
   selector: 'app-acerca_de',
@@ -6,11 +11,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./acerca_de.component.css']
 })
 export class Acerca_DeComponent implements OnInit {
-nombre: string = 'Hola Soy Ezequiel Barraza'
-acercaDe: string ='Programador Web Full Stack'
-  constructor() { }
+title: string = 'Hola Soy Ezequiel Barraza'
 
-  ngOnInit(): void {
+acercaDe :AcercaDe [] = [];
+showAddAcercaDe: boolean = false;
+  subscription?: Subscription;
+  constructor(private uiService : UiService,
+    
+    private datosPortfolioService: DatosPortfolioService) {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddAcercaDe = value) }
+
+  ngOnInit(): void {//Like Promise
+    this.datosPortfolioService.getAcercaDe().subscribe((acercaDe) => (this.acercaDe = acercaDe));
   }
-
+  toggleAddEducacion(){
+    console.log("toggleaddeducacion");
+    this.uiService.toggleAddEducacion();
+  }
+  deleteAcercaDe(acercaDe: AcercaDe){
+    this.datosPortfolioService.deleteAcercaDe(acercaDe)
+    .subscribe(
+      () => (
+      this.acercaDe = this.acercaDe.filter((t) => {
+      return t.id !== acercaDe.id })
+    ))
+  }
 }

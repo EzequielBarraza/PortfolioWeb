@@ -3,7 +3,7 @@ import {Experiencia} from "./Experiencia";
 import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 import {UiService} from 'src/app/servicios/ui.service'
 import { Subscription } from 'rxjs';
-import {Router, Routes} from '@angular/router'
+
 
  @Component({
   selector: 'app-experiencia',
@@ -17,7 +17,6 @@ export class ExperienciaComponent implements OnInit {
   subscription?: Subscription;
    
   constructor(private uiService : UiService,
-    private router: Router,
     private datosPortfolioService: DatosPortfolioService) 
     {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddExperiencia = value) }
   ngOnInit(): void {
@@ -40,7 +39,5 @@ export class ExperienciaComponent implements OnInit {
     this.datosPortfolioService.addExperiencia(experiencia).subscribe((experiencia) => ( this.experiencia.push(experiencia)
     ))
    }
-   hasRoute(route:string){
-    return this.router.url === route;
-  }
+  
 }

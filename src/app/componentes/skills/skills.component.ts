@@ -3,7 +3,7 @@ import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 import {Skill} from "../skills/Skills";
 import {UiService} from 'src/app/servicios/ui.service'
 import { Subscription } from 'rxjs';
-import {Router, Routes} from '@angular/router'
+
 
 
 @Component({
@@ -17,7 +17,7 @@ title: string= 'Soft & Hard Skills';
 showAddSkill: boolean = false;
   subscription?: Subscription;
 constructor(private uiService : UiService,
-  private router: Router,
+  
   private datosPortfolioService: DatosPortfolioService
 ) {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddSkill = value)}
 
@@ -40,7 +40,5 @@ constructor(private uiService : UiService,
         this.datosPortfolioService.addSkill(skill).subscribe((skill) => ( this.skill.push(skill)
         ))
        }
-       hasRoute(route:string){
-        return this.router.url === route;
-      }
+       
     }

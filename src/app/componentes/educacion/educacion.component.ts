@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Educacion} from "./Educacion"
 import {UiService} from 'src/app/servicios/ui.service'
 import { Subscription } from 'rxjs';
-import {Router, Routes} from '@angular/router'
-
 import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 
 @Component({
@@ -17,7 +15,7 @@ title: string ='Educación';
 showAddEducacion: boolean = false;
   subscription?: Subscription;
   constructor(private uiService : UiService,
-    private router: Router,
+    
     private datosPortfolioService: DatosPortfolioService
   ) {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddEducacion = value) }
 
@@ -41,7 +39,5 @@ addEducacion(educacion:Educacion) {
   this.datosPortfolioService.addEducacion(educacion).subscribe((educacion) => ( this.educacion.push(educacion)
   ))
  }
- hasRoute(route:string){
-  return this.router.url === route;
-}
+
 }

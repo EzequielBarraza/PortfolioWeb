@@ -1,0 +1,7 @@
+ p {
+    margin-bottom: 0em;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-SkyBlue);
+}
