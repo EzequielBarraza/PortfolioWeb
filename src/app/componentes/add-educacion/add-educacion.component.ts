@@ -5,10 +5,10 @@ import { Educacion } from '../educacion/Educacion';
 
 @Component({
   selector: 'app-add-item',
-  templateUrl: './add-item.component.html',
-  styleUrls: ['./add-item.component.css']
+  templateUrl: './add-educacion.component.html',
+  styleUrls: ['./add-educacion.component.css']
 })
-export class AddItemComponent implements OnInit {
+export class AddEducacionComponent implements OnInit {
   @Output() onAddEducacion: EventEmitter<Educacion> = new EventEmitter()
   titulo: string ="";
   instituto: string="";

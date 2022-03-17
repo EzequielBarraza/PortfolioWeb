@@ -17,7 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { EducacionItemComponent } from './componentes/educacion-item/educacion-item.component';
 import { SkillsItemComponent } from './componentes/skills-item/skills-item.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { AddItemComponent } from './componentes/add-item/add-item.component';
+import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { AddItemComponent } from './componentes/add-item/add-item.component';
     EducacionItemComponent,
     SkillsItemComponent,
     ProyectosComponent,
-    AddItemComponent,
+    AddEducacionComponent,
   
   ],
   imports: [
