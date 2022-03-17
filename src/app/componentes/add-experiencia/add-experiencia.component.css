@@ -1,0 +1,17 @@
+
+.btn-block {
+    display: flex;
+    width: 25%;
+    background-color: var(--main-SkyBlue);
+}
+
+.form-control{
+    background-color: var(--main-grayDark);
+}
+#add-experiencia {  
+    text-align: center;
+    background-color: var(--main-grayDark);
+    margin-top: 0.2em;
+    margin-left: 10em;
+    margin-right: auto;
+  }

@@ -1,0 +1,37 @@
+
+.btn-block {
+    display: flex;
+    width: 25%;
+    background-color: var(--main-SkyBlue);
+}
+
+.form-control{
+    background-color: var(--main-grayDark);
+}
+#add-skill {
+   
+    text-align: center;
+    background-color: var(--main-grayDark);
+    margin-top: 0.2em;
+    margin-left: 20em;
+    margin-right: auto;
+  }
+
+  .form-control input {
+  
+    width: 60%;
+    height: 1em;
+    margin: 1em;
+    padding: 1em 0.5em;
+    font-size: 1em;
+  }
+
+  .add-form{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    background-color: var(--main-grayDark);
+    color: var(--main-gray);
+  }

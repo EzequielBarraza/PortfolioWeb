@@ -1,3 +1,9 @@
+#navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
 .fotoPerfil{
   position: fixed;
   max-width: 6%;
@@ -15,7 +21,7 @@
   align-self: flex-start;
 }
 .nav-Redes {
-  font-size: 15px;
+  font-size: 1.2rem;
   font-style: italic;
   color: var(--main-white);
   transform: translateY(8px);
@@ -46,6 +52,7 @@ z-index: 10;
 .nav-list {
 display: flex;
 margin-right: 2rem;
+align-items: right;
 }
 
 @media (max-width: 28.75em) {

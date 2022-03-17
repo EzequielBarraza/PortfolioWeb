@@ -1,7 +1,7 @@
 :root {
     --main-white: #f0f0f0;
     --main-red: #be3144;
-    --main-SkyBlue:#50b5dd;
+    --main-SkyBlue:#489ec0;
     --main-grayDark: #272626;
     --main-gray: #303841;
   }
@@ -100,5 +100,33 @@ a:hover {
 
 /* selected link */
 a:active {
+  color: var(--main-gray);
+}
+
+.form-control {
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  color: var(--main-SkyBlue);
+  
+}
+
+.form-control input {
+  
+  width: 80%;
+  height: 1em;
+  margin: 1em;
+  padding: 1em 0.5em;
+  font-size: 1em;
+}
+
+.add-form{
+  display: flex;
+  width: 75%;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  background-color: var(--main-grayDark);
   color: var(--main-gray);
 }

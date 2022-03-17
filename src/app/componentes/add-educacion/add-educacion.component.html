@@ -1,0 +1,31 @@
+<section id="add-educacion"><form class="add-form" 
+(ngSubmit)="onSubmit()"
+*ngIf="showAddEducacion"
+>
+    <div class="form-control" >
+<label for="text">{{Titulo}}</label>
+<input type="text"
+ name="titulo" id="titulo" 
+ placeholder="Agregar Titulo"
+ [(ngModel)]="titulo"
+ />
+</div>
+<div class="form-control" >
+    <label for="text">{{Instituto}}</label>
+    <input type="text"
+     name="instituto" id="instituto" 
+     placeholder="Agregar Instituto"
+     [(ngModel)]="instituto"
+     />
+    </div>
+    <div class="form-control" >
+        <label for="text">{{Expedicion}}</label>
+        <input type="text"
+         name="expedicion" id="expedicion" 
+         placeholder="Agregar expedicion"
+         [(ngModel)]="expedicion"
+         />
+        </div>
+
+<input id="Guardar" type="submit" value="Guardar" class="btn btn-block"/>
+</form></section>

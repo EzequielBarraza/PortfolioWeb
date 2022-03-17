@@ -1,0 +1,31 @@
+<section id="add-experiencia"><form class="add-form" 
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAddExperiencia"
+    >
+        <div class="form-control" >
+    <label for="text">{{Cargo}}</label>
+    <input type="text"
+     name="cargo" id="cargo" 
+     placeholder="Agregar cargo"
+     [(ngModel)]="cargo"
+     />
+    </div>
+    <div class="form-control" >
+        <label for="text">{{Institucion}}</label>
+        <input type="text"
+         name="institucion" id="institucion" 
+         placeholder="Agregar Institucion"
+         [(ngModel)]="institucion"
+         />
+        </div>
+        <div class="form-control" >
+            <label for="text">{{Periodo}}</label>
+            <input type="text"
+             name="periodo" id="periodo" 
+             placeholder="Agregar periodo"
+             [(ngModel)]="periodo"
+             />
+            </div>
+    
+    <input id="Guardar" type="submit" value="Guardar" class="btn btn-block"/>
+    </form></section>

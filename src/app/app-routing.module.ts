@@ -9,18 +9,21 @@ import { EducacionComponent} from './componentes/educacion/educacion.component';
 import { SkillsComponent} from './componentes/skills/skills.component';
 import { FooterComponent} from './componentes/footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
+import {ProyectosComponent} from './componentes/proyectos/proyectos.component'
+
 const routes: Routes = [
   
   {path: 'header', component: HeaderComponent},
   {path: 'login', component: LoginComponent},
   {path: 'acerca_de', component: Acerca_DeComponent},
-
+  {path: 'proyectos', component: ProyectosComponent},
   {path: 'experiencia', component: ExperienciaComponent},
   {path: 'educación', component: EducacionComponent},
   {path: 'skills', component: SkillsComponent},
   {path: 'footer', component: FooterComponent},
   { path: '', redirectTo: 'acerca_de', pathMatch: 'full' },
-  { path: '**', redirectTo: 'acerca_de', pathMatch: 'full' }
+  { path: '**', redirectTo: 'acerca_de', pathMatch: 'full' },
+ 
 ];
 
 @NgModule({

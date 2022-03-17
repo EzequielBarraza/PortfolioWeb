@@ -6,11 +6,14 @@
       [experiencia]="experiencia"
       (onDeleteExperiencia)="deleteExperiencia(experiencia)"
  ></app-experiencia-item>
- <app-button color=
-    "var(--main-red)" 
+ <app-button color="{{showAddExperiencia ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
+ text="{{showAddExperiencia ? 'Cerrar' : 'Añadir Experiencia'}}" text="Añadir Experiencia" 
     text="Añadir Experiencia Laboral"
-    (btnClick)="toggleaddexperiencia()"
+    (btnClick)="toggleAddExperiencia()"
     ></app-button>
+    <app-add-experiencia
+(onAddExperiencia) = "addExperiencia($event)"
+></app-add-experiencia>
     </div>
     
 

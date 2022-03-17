@@ -22,8 +22,9 @@ form {
     margin-bottom: 0 auto;
   }
 
-#cancel{
-  color:black;
+#btn-login{
+  color: var(--main-white);
+  background-color: var(--main-SkyBlue);
   margin-left:0.2em;
 }
   
