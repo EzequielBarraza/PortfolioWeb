@@ -4,19 +4,12 @@
       "id": "1",
       "cargo": "Secretario de Recursos Humanos",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
-<<<<<<< HEAD
-      "periodo": "Periodo: 2019 - Actualmente"
-=======
       "periodo": "2019 - Actualmente"
->>>>>>> develop
     },
     {
       "id": "2",
       "cargo": "Secretario Nivel Secundario",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
-<<<<<<< HEAD
-      "periodo": "Periodo: 2013 - Actualmente"
-=======
       "periodo": "2013 - Actualmente"
     },
     {
@@ -24,7 +17,6 @@
       "cargo": "Profesor de Ed. Física",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
       "periodo": "2010 - Actualmente"
->>>>>>> develop
     }
   ],
   "educacion": [
@@ -49,11 +41,6 @@
     {
       "id": "4",
       "titulo": "Bachiller en Economia y Gestión de las Organizaciones",
-<<<<<<< HEAD
-      "instituto": "Instituto Don Quijote de la Mancha",
-      "expedicion": "Febrero 2006"
-    }
-=======
       "instituto": "Inst. Don Quijote de la Mancha",
       "expedicion": "Febrero 2006"
     }
@@ -75,6 +62,5 @@
       "skill": "Trabajo en Equipo",
       "id": "1Elpi7n"
     }
->>>>>>> develop
   ]
 }
