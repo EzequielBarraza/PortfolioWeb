@@ -15,7 +15,7 @@ this.showAddEducacion = !this.showAddEducacion
 this.subjet.next(this.showAddEducacion);
   }
 
-  toggleAddExperienciap():void {
+  toggleAddExperiencia():void {
     console.log("Toggle Add Experiencia");
 this.showAddExperiencia = !this.showAddExperiencia
 this.subjet.next(this.showAddExperiencia);

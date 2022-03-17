@@ -53,6 +53,8 @@ export class DatosPortfolioService {
   addEducacion(educacion:Educacion): Observable<Educacion>{ 
     return this.http.post<Educacion>(this.apiUrledu, educacion, httpOptions);
   }
-  
+  addExperiencia(experiencia: Experiencia): Observable<Experiencia>{ 
+    return this.http.post<Experiencia>(this.apiUrlexp, experiencia, httpOptions);
+  }
   }
 

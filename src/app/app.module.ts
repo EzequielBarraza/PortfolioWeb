@@ -18,6 +18,7 @@ import { EducacionItemComponent } from './componentes/educacion-item/educacion-i
 import { SkillsItemComponent } from './componentes/skills-item/skills-item.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
+import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AddEducacionComponent } from './componentes/add-educacion/add-educacion
     SkillsItemComponent,
     ProyectosComponent,
     AddEducacionComponent,
+    AddExperienciaComponent,
   
   ],
   imports: [

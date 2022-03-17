@@ -9,8 +9,11 @@
  <app-button color=
     "var(--main-SkyBlue)" 
     text="Añadir Experiencia Laboral"
-    (btnClick)="toggleaddexperiencia()"
+    (btnClick)="toggleAddExperiencia()"
     ></app-button>
+    <app-add-experiencia
+(onAddExperiencia) = "addExperiencia($event)"
+></app-add-experiencia>
     </div>
     
 

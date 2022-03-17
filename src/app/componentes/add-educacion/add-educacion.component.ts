@@ -4,12 +4,15 @@ import { Subscription} from 'rxjs'
 import { Educacion } from '../educacion/Educacion';
 
 @Component({
-  selector: 'app-add-item',
+  selector: 'app-add-educacion',
   templateUrl: './add-educacion.component.html',
   styleUrls: ['./add-educacion.component.css']
 })
 export class AddEducacionComponent implements OnInit {
   @Output() onAddEducacion: EventEmitter<Educacion> = new EventEmitter()
+  Titulo: string ="Titulo";
+  Instituto: string="Instituto";
+  Expedicion: string ="Expedición";
   titulo: string ="";
   instituto: string="";
   expedicion: string ="";
