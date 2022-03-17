@@ -130,10 +130,3 @@ a:active {
   background-color: var(--main-grayDark);
   color: var(--main-gray);
 }
-#add-educacion {
-  display:inline-block;
-  text-align: center;
-  background-color: var(--main-grayDark);
-  margin-left: auto;
-  margin-right: auto;
-}

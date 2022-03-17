@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import {Educacion} from "../componentes/educacion/Educacion";
-import { EDUCACION } from "../componentes/educacion/mock-educacion";
 import {Experiencia} from "../componentes/experiencia/Experiencia";
-import { EXPERIENCIA } from "../componentes/experiencia/mock-experiencia";
 import { Observable, of } from 'rxjs';
 import {HttpClient, HttpHeaders, HttpHandler} from '@angular/common/http'
 import {Skill} from "../componentes/skills/Skills";
-import { SKILL } from "../componentes/skills/mock-skills";
+
 
 const httpOptions = {
   headers : new HttpHeaders ({
@@ -55,6 +53,9 @@ export class DatosPortfolioService {
   }
   addExperiencia(experiencia: Experiencia): Observable<Experiencia>{ 
     return this.http.post<Experiencia>(this.apiUrlexp, experiencia, httpOptions);
+  }
+  addSkill(skill: Skill): Observable<Skill>{ 
+    return this.http.post<Skill>(this.apiUrlskill, skill, httpOptions);
   }
   }
 

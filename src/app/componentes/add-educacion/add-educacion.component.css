@@ -9,9 +9,10 @@
     background-color: var(--main-grayDark);
 }
 #add-educacion {
-    display:inline-block;
+    
     text-align: center;
     background-color: var(--main-grayDark);
-    margin-left: auto;
+    margin-top: 00.5em;
+    margin-left: 10em;
     margin-right: auto;
   }

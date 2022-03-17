@@ -8,10 +8,10 @@
 .form-control{
     background-color: var(--main-grayDark);
 }
-#add-experiencia {
-    display:inline-block;
+#add-experiencia {  
     text-align: center;
     background-color: var(--main-grayDark);
-    margin-left: auto;
+    margin-top: 00.5em;
+    margin-left: 10em;
     margin-right: auto;
   }

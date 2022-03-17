@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 import {Skill} from "../skills/Skills";
-import { SKILL } from "../skills/mock-skills";
+import {UiService} from 'src/app/servicios/ui.service'
+import { Subscription } from 'rxjs';
+import {Router, Routes} from '@angular/router'
 
 
 @Component({
@@ -12,14 +14,19 @@ import { SKILL } from "../skills/mock-skills";
 export class SkillsComponent implements OnInit {
   skill: Skill[] = [];
 title: string= 'Soft & Hard Skills';
-
-  constructor(private datosPortfolioService: DatosPortfolioService) { }
+showAddSkill: boolean = true;
+  subscription?: Subscription;
+constructor(private uiService : UiService,
+  private router: Router,
+  private datosPortfolioService: DatosPortfolioService
+) {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddSkill = value)}
 
   ngOnInit(): void {
     this.datosPortfolioService.getSkill().subscribe((skill) => (this.skill = skill));
   }
   toggleAddSkill(){
     console.log("toggle add skill");
+    this.uiService.toggleAddSkill();
   }
   deleteSkill(skill: Skill){
     this.datosPortfolioService.deleteSkill(skill)
@@ -28,4 +35,12 @@ title: string= 'Soft & Hard Skills';
       this.skill = this.skill.filter((t) => {
       return t.id !== skill.id })
     ))
-      }}
+      }
+      addSkill(skill:Skill) {
+        this.datosPortfolioService.addSkill(skill).subscribe((skill) => ( this.skill.push(skill)
+        ))
+       }
+       hasRoute(route:string){
+        return this.router.url === route;
+      }
+    }

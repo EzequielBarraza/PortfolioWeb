@@ -8,6 +8,7 @@ export class UiService {
 private showAddEducacion : boolean = false;
 private subjet = new Subject<any>();
 private showAddExperiencia : boolean = false;
+private showAddSkill : boolean = false;
   constructor() { }
   toggleAddEducacion():void {
     console.log("Toggle Add Educacion");
@@ -19,6 +20,11 @@ this.subjet.next(this.showAddEducacion);
     console.log("Toggle Add Experiencia");
 this.showAddExperiencia = !this.showAddExperiencia
 this.subjet.next(this.showAddExperiencia);
+  }
+  toggleAddSkill():void {
+    console.log("Toggle Add Skill");
+this.showAddSkill = !this.showAddSkill
+this.subjet.next(this.showAddSkill);
   }
   onToggle() : Observable<any>{
     return this.subjet.asObservable();

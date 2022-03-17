@@ -19,6 +19,7 @@ import { SkillsItemComponent } from './componentes/skills-item/skills-item.compo
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
 import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
+import { AddSkillComponent } from './componentes/add-skill/add-skill.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { AddExperienciaComponent } from './componentes/add-experiencia/add-exper
     ProyectosComponent,
     AddEducacionComponent,
     AddExperienciaComponent,
+    AddSkillComponent,
   
   ],
   imports: [

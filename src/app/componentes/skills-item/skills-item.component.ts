@@ -11,15 +11,10 @@ export class SkillsItemComponent implements OnInit {
   @Input() skill: Skill = SKILL[0];
   @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter()
   faTimes= faTimes;
-  skillA:string='Responsabilidad';
-  skillB:string='Resolución de problemas';
-  skillC:string='Diseño de sistemas';
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-toggleaddSkill(){
-    console.log("toggleaddskill");
   }
   onDelete(skill: Skill){
   console.log("DELETE!");

@@ -15,9 +15,7 @@ export class ExperienciaItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  toggleaddexperiencia(){
-    console.log("toggleaddexperiencia");
-  }
+  
   onDelete(experiencia:Experiencia){
   console.log("DELETE!");
     this.onDeleteExperiencia.emit(experiencia);
