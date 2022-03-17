@@ -9,10 +9,10 @@
     background-color: var(--main-grayDark);
 }
 #add-skill {
-    
+   
     text-align: center;
     background-color: var(--main-grayDark);
-    margin-top: 00.5em;
+    margin-top: 0.2em;
     margin-left: 20em;
     margin-right: auto;
   }

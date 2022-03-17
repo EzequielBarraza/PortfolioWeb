@@ -4,19 +4,19 @@
       "id": "1",
       "cargo": "Secretario de Recursos Humanos",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
-      "periodo": "Periodo: 2019 - Actualmente"
+      "periodo": "2019 - Actualmente"
     },
     {
       "id": "2",
       "cargo": "Secretario Nivel Secundario",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
-      "periodo": "Periodo: 2013 - Actualmente"
+      "periodo": "2013 - Actualmente"
     },
     {
       "id": "3",
       "cargo": "Profesor de Ed. Física",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
-      "periodo": "Periodo: 2010 - Actualmente"
+      "periodo": "2010 - Actualmente"
     }
   ],
   "educacion": [
@@ -57,6 +57,10 @@
     {
       "id": "3",
       "skill": "Diseño de Sistemas"
+    },
+    {
+      "skill": "Trabajo en Equipo",
+      "id": "1Elpi7n"
     }
   ]
 }

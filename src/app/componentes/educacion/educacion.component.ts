@@ -14,7 +14,7 @@ import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
 export class EducacionComponent implements OnInit {
   educacion :Educacion [] = [];
 title: string ='Educación';
-showAddEducacion: boolean = true;
+showAddEducacion: boolean = false;
   subscription?: Subscription;
   constructor(private uiService : UiService,
     private router: Router,

@@ -14,7 +14,7 @@ import {Router, Routes} from '@angular/router'
 export class SkillsComponent implements OnInit {
   skill: Skill[] = [];
 title: string= 'Soft & Hard Skills';
-showAddSkill: boolean = true;
+showAddSkill: boolean = false;
   subscription?: Subscription;
 constructor(private uiService : UiService,
   private router: Router,

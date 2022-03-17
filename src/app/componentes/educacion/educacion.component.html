@@ -7,7 +7,8 @@
       (onDeleteEducacion)="deleteEducacion(educacion)"
       ></app-educacion-item>
       <app-button  
-color="var(--main-SkyBlue)" 
+      color="{{showAddEducacion ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
+      text="{{showAddEducacion ? 'Cerrar' : 'Añadir Educación'}}"
 text="Añadir Educación"
 (btnClick)="toggleAddEducacion()"
 ></app-button>

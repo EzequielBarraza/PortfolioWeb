@@ -7,7 +7,8 @@
   [skill]="skill"
   (onDeleteSkill)="deleteSkill(skill)"></app-skills-item>
   
-    <app-button color="var(--main-SkyBlue)" text="Añadir Skill"
+    <app-button  color="{{showAddSkill ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
+    text="{{showAddSkill ? 'Cerrar' : 'Añadir Skill'}}" text="Añadir Skill"
     (btnClick)="toggleAddSkill()"
     ></app-button>
     <app-add-skill

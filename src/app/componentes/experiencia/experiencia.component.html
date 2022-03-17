@@ -6,8 +6,8 @@
       [experiencia]="experiencia"
       (onDeleteExperiencia)="deleteExperiencia(experiencia)"
  ></app-experiencia-item>
- <app-button color=
-    "var(--main-SkyBlue)" 
+ <app-button color="{{showAddExperiencia ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
+ text="{{showAddExperiencia ? 'Cerrar' : 'Añadir Experiencia'}}" text="Añadir Experiencia" 
     text="Añadir Experiencia Laboral"
     (btnClick)="toggleAddExperiencia()"
     ></app-button>

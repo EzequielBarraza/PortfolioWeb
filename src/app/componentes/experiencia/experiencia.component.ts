@@ -13,7 +13,7 @@ import {Router, Routes} from '@angular/router'
 export class ExperienciaComponent implements OnInit {
   experiencia: Experiencia[] = [];
   title: string ='Experiencia Laboral';
-  showAddExperiencia: boolean = true;
+  showAddExperiencia: boolean = false;
   subscription?: Subscription;
    
   constructor(private uiService : UiService,
