@@ -1,0 +1,15 @@
+<section id="add-acercaDe"><form class="add-form" 
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAddAcercaDe"
+    >
+        <div class="form-control" >
+    <label for="text">Texto</label>
+    <input type="text"
+     name="acercaDe" id="acercaDe" 
+     placeholder="Agregar Texto"
+     [(ngModel)]="texto"
+     />
+    </div>
+    
+    <input id="guardar" type="submit" value="Guardar" class="btn btn-block"/>
+    </form></section>

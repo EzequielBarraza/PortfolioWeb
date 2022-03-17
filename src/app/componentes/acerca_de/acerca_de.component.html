@@ -5,6 +5,15 @@
     [acercaDe]="acercaDe"
     (onDeleteAcercaDe)="deleteAcercaDe(acercaDe)"
     ></app-acerca-de-item>
-  </section>
+    <app-button  
+    color="{{showAddAcercaDe ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
+    text="{{showAddAcercaDe ? 'Cerrar' : 'Añadir Texto'}}"
+text="Añadir Texto"
+(btnClick)="toggleAddAcercaDe()"
+></app-button>
+<app-add-acerca-de
+(onAddAcercaDe) = "addAcercaDe($event)"></app-add-acerca-de>
+</section>
+  
   
 

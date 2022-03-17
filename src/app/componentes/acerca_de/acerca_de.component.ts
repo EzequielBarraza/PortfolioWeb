@@ -23,6 +23,11 @@ showAddAcercaDe: boolean = false;
   ngOnInit(): void {//Like Promise
     this.datosPortfolioService.getAcercaDe().subscribe((acercaDe) => (this.acercaDe = acercaDe));
   }
+
+  toggleAddAcercaDe(){
+    console.log("toggle add acercaDe");
+    this.uiService.toggleAddAcercaDe();
+  }
   toggleAddEducacion(){
     console.log("toggleaddeducacion");
     this.uiService.toggleAddEducacion();
@@ -35,4 +40,8 @@ showAddAcercaDe: boolean = false;
       return t.id !== acercaDe.id })
     ))
   }
+  addAcercaDe(acercaDe: AcercaDe){
+    this.datosPortfolioService.addAcercaDe(acercaDe).subscribe((acercaDe) => ( this.acercaDe.push(acercaDe)
+    ))
+   }
 }

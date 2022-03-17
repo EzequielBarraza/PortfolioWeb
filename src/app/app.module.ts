@@ -21,6 +21,7 @@ import { AddEducacionComponent } from './componentes/add-educacion/add-educacion
 import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
 import { AddSkillComponent } from './componentes/add-skill/add-skill.component';
 import { AcercaDeItemComponent } from './componentes/acerca-de-item/acerca-de-item.component';
+import { AddAcercaDeComponent } from './componentes/add-acerca-de/add-acerca-de.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { AcercaDeItemComponent } from './componentes/acerca-de-item/acerca-de-it
     AddExperienciaComponent,
     AddSkillComponent,
     AcercaDeItemComponent,
+    AddAcercaDeComponent,
   
   ],
   imports: [
