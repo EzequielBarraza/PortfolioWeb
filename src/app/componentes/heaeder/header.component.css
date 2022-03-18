@@ -1,18 +1,21 @@
 #navbar {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  
+  justify-content: right;
+  font-style: italic;
 }
 
 .fotoPerfil{
   position: fixed;
+  max-height: 15%;
   max-width: 6%;
   min-width: 3%;
   border-radius: 50%;
   left: 0;
-  top:85;
-  right: 35;
-  margin: 15px;
+  margin-left: 1em;
+  margin-top:3em;
+  margin-bottom: auto;
+  margin-right: auto;
 }
 .logoAP {
   max-width: 10%;
@@ -21,7 +24,7 @@
   align-self: flex-start;
 }
 .nav-Redes {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: italic;
   color: var(--main-white);
   transform: translateY(8px);
@@ -38,16 +41,17 @@ margin-right: 1em;
 }
 
 .nav {
-display: flex;
-justify-content: flex-end;
-position: fixed;
-top: 0;
-left: 25;
-width: 100%;
-background: var(--main-SkyBlue);
-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-z-index: 10;
-}
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  top: 0;
+  left: 25;
+  width: 100%;
+  background: var(--main-SkyBlue);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  }
 
 .nav-list {
 display: flex;
@@ -55,35 +59,30 @@ margin-right: 2rem;
 align-items: right;
 }
 
-@media (max-width: 28.75em) {
-.nav {
-  justify-content: right;
-}
+
 
 .nav-list {
   margin: 0 1rem;
 }
-}
+
 
 .nav-list a {
 display: block;
-font-size: 1.5rem;
-padding: 2rem;
+font-size: 1.1rem;
+padding: 1rem;
 }
 
-  /* unvisited link */
   a:link {
     color: var(--main-white);
   }
-  /* visited link */
   a:visited {
     color: var(--main-white);
   }
-  /* mouse over link */
+
   a:hover {
     color: var(--main-gray);
   }
-  /* selected link */
+  
   a:active {
     color: var(--main-gray);
   }

@@ -1,6 +1,5 @@
 <section id="educación" class="educación-section">
   <h2 class="educación-section-header">{{title}}</h2>
-    <div>
       <app-educacion-item
       *ngFor="let educacion of educacion"
       [educacion]="educacion"
@@ -15,6 +14,5 @@ text="Añadir Educación"
 <app-add-educacion
 (onAddEducacion) = "addEducacion($event)"
 ></app-add-educacion>
-</div>
-
+</section>
 

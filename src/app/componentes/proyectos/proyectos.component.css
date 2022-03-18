@@ -12,7 +12,7 @@
   .proyectos-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    margin-top: 2.5em;
+    margin-top: 0em;
     margin-bottom: 1.5em;
     border-bottom: 0.2rem solid var(--main-white);
   }
