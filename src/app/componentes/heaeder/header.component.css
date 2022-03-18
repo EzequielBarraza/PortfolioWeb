@@ -6,14 +6,14 @@
 }
 
 .fotoPerfil{
-  position: fixed;
+  position: absolute;
   max-height: 15%;
   max-width: 6%;
   min-width: 3%;
   border-radius: 50%;
   left: 0;
   margin-left: 1em;
-  margin-top:3em;
+  margin-top:1.84em;
   margin-bottom: auto;
   margin-right: auto;
 }
