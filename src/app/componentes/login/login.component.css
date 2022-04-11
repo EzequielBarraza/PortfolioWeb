@@ -1,10 +1,7 @@
-form {
-  font-size: 3rem;
-  font-weight: 200;
-  font-style: italic;
-  color: var(--main-white);
-}
 
+.login {
+  background-color: var(--main-grayDark)
+}
 .error{
     color:red
   }
@@ -13,13 +10,16 @@ form {
     border-color: red;
   }
 
-  .loginForm{
-   
-    text-align: center;
-    padding: 10rem 2rem;
+  #loginForm{
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 100;
+    font-style: italic;
+    
+    padding: 4em 0em 2em 2em;
     background: var(--main-grayDark);
-    margin-top: 0em;
-    margin-bottom: 0 auto;
+    
   }
 
 #btn-login{
@@ -27,4 +27,8 @@ form {
   background-color: var(--main-SkyBlue);
   margin-left:0.2em;
 }
-  
+#btn-cancelar{
+  color: var(--main-white);
+  background-color: var(--main-SkyBlue);
+  margin-left:0.2em;
+}
