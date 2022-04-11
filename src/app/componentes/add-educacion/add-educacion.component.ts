@@ -10,12 +10,14 @@ import { Educacion } from '../educacion/Educacion';
 })
 export class AddEducacionComponent implements OnInit {
   @Output() onAddEducacion: EventEmitter<Educacion> = new EventEmitter()
-  Titulo: string ="Titulo";
-  Instituto: string="Instituto";
-  Expedicion: string ="Expedición";
-  titulo: string ="";
-  instituto: string="";
-  expedicion: string ="";
+  Title: string ="Titulo";
+  School: string="Instituto";
+  Start: string ="Inicio de Carerra";
+  End: string="Final de Carrera"
+  title: string ="";
+  school: string="";
+  start: string="" ;
+  end: string="";
   showAddEducacion: boolean= false;
 subscription? : Subscription;
   constructor(private uiService : UiService) { 
@@ -24,12 +26,12 @@ subscription? : Subscription;
   ngOnInit(): void {
   }
   onSubmit(){
-    if(this.titulo.length ===0){
+    if(this.title.length ===0){
       alert("Please add a Educación!");
       return
     }
-    const {titulo, instituto, expedicion} = this
-    const newEducacion = {titulo, instituto, expedicion}
+    const {title, school, start, end} = this
+    const newEducacion = {title, school, start,end}
     this.onAddEducacion.emit(newEducacion);
     }
 }

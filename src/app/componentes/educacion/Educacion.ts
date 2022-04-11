@@ -1,6 +1,10 @@
 export interface Educacion {
     id?: number,
-    titulo: string;
-    instituto: string;
-    expedicion: string;
+    school: string;
+    title: string,
+    img?: string,
+    career?: string,
+    score?: number,
+    start: string,
+    end: string
 }
