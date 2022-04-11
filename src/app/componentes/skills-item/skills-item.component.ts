@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {Skill} from "../skills/Skills";
+import {Skill} from "../../data/Skills";
 import { SKILL } from "../skills/mock-skills";
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 @Component({

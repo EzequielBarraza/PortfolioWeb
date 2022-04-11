@@ -1,4 +1,4 @@
-import {Experiencia} from "./Experiencia"
+import {Experiencia} from "../../data/Experiencia"
 
 export const EXPERIENCIA : Experiencia [] = [{
     id: 1,

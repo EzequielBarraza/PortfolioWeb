@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {UiService} from 'src/app/servicios/ui.service'
 import { Subscription} from 'rxjs'
-import { AcercaDe } from '../acerca_de/AcercaDe';
+import { AcercaDe } from '../../data/AcercaDe';
 
 @Component({
   selector: 'app-add-acerca-de',

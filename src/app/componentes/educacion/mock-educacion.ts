@@ -1,4 +1,4 @@
-import {Educacion} from "./Educacion"
+import {Educacion} from "../../data/Educacion"
 
 export const EDUCACION: Educacion [] = [
         {id: 1,

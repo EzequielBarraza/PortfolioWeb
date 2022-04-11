@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {Educacion} from "../educacion/Educacion";
+import {Educacion} from "../../data/Educacion";
 import { EDUCACION } from "../educacion/mock-educacion";
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 @Component({

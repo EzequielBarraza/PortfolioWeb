@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {AcercaDe} from "../acerca_de/AcercaDe";
+import {AcercaDe} from "../../data/AcercaDe";
 import { ACERCA_DE } from "../acerca_de/mock-acercaDe";
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 

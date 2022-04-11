@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import {Educacion} from "../componentes/educacion/Educacion";
-import {Experiencia} from "../componentes/experiencia/Experiencia";
-import {AcercaDe} from "../componentes/acerca_de/AcercaDe";
+import {Educacion} from "../data/Educacion";
+import {Experiencia} from "../data/Experiencia";
+import {AcercaDe} from "../data/AcercaDe";
 import { Observable, of } from 'rxjs';
 import {HttpClient, HttpHeaders, HttpHandler} from '@angular/common/http'
-import {Skill} from "../componentes/skills/Skills";
+import {Skill} from "../data/Skills";
 
 
 const httpOptions = {

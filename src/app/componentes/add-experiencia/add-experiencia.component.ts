@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {UiService} from 'src/app/servicios/ui.service'
 import { Subscription} from 'rxjs'
-import { Experiencia } from '../experiencia/Experiencia';
+import { Experiencia } from '../../data/Experiencia';
 
 @Component({
   selector: 'app-add-experiencia',

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AcercaDe} from "./AcercaDe"
+import {AcercaDe} from "../../data/AcercaDe"
 import {UiService} from 'src/app/servicios/ui.service'
 import { Subscription } from 'rxjs';
 import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";

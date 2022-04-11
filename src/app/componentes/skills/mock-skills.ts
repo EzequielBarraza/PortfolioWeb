@@ -1,4 +1,4 @@
-import {Skill} from "./Skills"
+import {Skill} from "../../data/Skills"
 
 export const SKILL : Skill [] = [{
     id: 1,
