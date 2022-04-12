@@ -18,7 +18,7 @@
   margin-right: auto;
 }
 .logoAP {
-  max-width: 10%;
+  max-width: 15%;
 }
 .logo {
   align-self: flex-start;
@@ -51,6 +51,7 @@ margin-right: 1em;
   background: var(--main-SkyBlue);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
+  
   }
 
 .nav-list {

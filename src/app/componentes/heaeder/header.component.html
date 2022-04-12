@@ -1,6 +1,8 @@
+
 <nav id="navbar" class="nav">
+  
     <ul id="nav-list" class="nav-list">
-      <li class="logo"><img class="logoAP" src="assets/img/APLogo.png" alt="argpprod" ></li>
+      <li class="logo"><a class="navbar-brand" href="#"><img class="logoAP" src="assets/img/APLogo.png" alt="argpprod" ></a>
       <li>
         <a routerLink="./acerca_de">Acerca de...</a>
       </li>
@@ -16,11 +18,14 @@
       <li>
         <a routerLink="./proyectos">Proyectos</a>
       </li>
-    <li><button class="btn" routerLink="./login">Login</button></li>
+      <li><button *ngIf="!isUserLogged" class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">Login</button>
+        <button *ngIf="isUserLogged" class="btn btn-outline-success my-2 my-sm-0" routerLink="/logout" (click)="logout()">Logout</button></li>
     </ul>
+    
     <ul>
     <li class="foto"><img class="fotoPerfil" src="assets/img/fotoPerfil.jpg" alt="foto de perfil" ></li>
   </ul>
+  
     <ul class="nav-Redes">
      
       <li><a
@@ -51,10 +56,7 @@
       >
       </li>
     </ul>
-
-  
   </nav>
  
   
- 
   
