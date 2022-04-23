@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from 'src/app/servicios/auth.service'
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class NavbarComponent implements OnInit {
   isUserLogged: boolean = false;
   constructor( private authService: AuthService) { }
 

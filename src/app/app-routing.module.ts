@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HeaderComponent } from './componentes/heaeder/header.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { Acerca_DeComponent } from './componentes/acerca_de/acerca_de.component';
 import { ExperienciaComponent} from './componentes/experiencia/experiencia.component';
@@ -13,7 +13,7 @@ import {ProyectosComponent} from './componentes/proyectos/proyectos.component'
 
 const routes: Routes = [
   
-  {path: 'header', component: HeaderComponent},
+  {path: 'navbar', component: NavbarComponent},
   {path: 'login', component: LoginComponent},
   {path: 'acerca_de', component: Acerca_DeComponent},
   {path: 'proyectos', component: ProyectosComponent},

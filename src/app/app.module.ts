@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './componentes/heaeder/header.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { Acerca_DeComponent } from './componentes/acerca_de/acerca_de.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
@@ -27,7 +27,7 @@ import { AddAcercaDeComponent } from './componentes/add-acerca-de/add-acerca-de.
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    NavbarComponent,
     Acerca_DeComponent,
     ExperienciaComponent,
     EducacionComponent,
