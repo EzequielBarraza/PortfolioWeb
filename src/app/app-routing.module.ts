@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import {PortfolioComponent} from './componentes/portfolio/portfolio.component'
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { Acerca_DeComponent } from './componentes/acerca_de/acerca_de.component';
@@ -15,14 +15,15 @@ const routes: Routes = [
   
   {path: 'navbar', component: NavbarComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'home', component: PortfolioComponent},
   {path: 'acerca_de', component: Acerca_DeComponent},
   {path: 'proyectos', component: ProyectosComponent},
   {path: 'experiencia', component: ExperienciaComponent},
   {path: 'educación', component: EducacionComponent},
   {path: 'skills', component: SkillsComponent},
   {path: 'footer', component: FooterComponent},
-  { path: '', redirectTo: 'acerca_de', pathMatch: 'full' },
-  { path: '**', redirectTo: 'acerca_de', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
  
 ];
 

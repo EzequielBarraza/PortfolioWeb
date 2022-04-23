@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.form.value).subscribe(
       (response: Boolean) => {
         if (response)
-          this.router.navigate(['/acerca_de']);
+          this.router.navigate(['/home']);
         else
           this.loginError = true;
       }
