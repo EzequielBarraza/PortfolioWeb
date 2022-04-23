@@ -6,7 +6,7 @@
 }
 
 .fotoPerfil{
-  position: absolute;
+  position: fixed;
   max-height: 15%;
   max-width: 6%;
   min-width: 3%;
@@ -83,4 +83,9 @@ padding: 1rem;
   
   a:active {
     color: var(--main-gray);
+  }
+
+  #navbar{position:fixed;
+    top: 0;
+    width: 100%;
   }
