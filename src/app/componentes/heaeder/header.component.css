@@ -27,10 +27,7 @@
   font-size: 1.1rem;
   font-style: italic;
   color: var(--main-white);
-  transform: translateY(8px);
-  transform: translateX(2px);
   text-shadow: 2px 2px 1px #161515;
-transition: transform 0.3s ease-out;
 margin-right: 1em;
 }
 

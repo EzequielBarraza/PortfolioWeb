@@ -1,8 +1,10 @@
 <div class="acerca_de"><p >
     {{acercaDe.texto}}.   
-    <fa-icon [icon]="faTimes" 
-    [ngStyle]="{'color':'var(--main-red)','cursor':'pointer'}" 
-    (click)="onDelete(acercaDe)"></fa-icon></p>
+    <span><a href="/acerca_de" class="btn-right"><i class="fa fa-pen"
+        onclick="showEditExpModal('Pixar')"></i></a></span>
+        <span class="btn-edit" class="btn-right"><i [ngStyle]="{'padding':'1rem','cursor':'pointer'}" class="fa fa-trash"
+          (click)="onDelete(acercaDe)"></i></span>
+          </p>
 
 </div>
 

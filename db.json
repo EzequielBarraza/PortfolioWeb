@@ -1,12 +1,6 @@
 {
   "experiencia": [
     {
-      "id": "1",
-      "cargo": "Secretario de Recursos Humanos",
-      "institucion": "Instituto Miguel de Cervantes Saavedra",
-      "periodo": "2019 - Actualmente"
-    },
-    {
       "id": "2",
       "cargo": "Secretario Nivel Secundario",
       "institucion": "Instituto Miguel de Cervantes Saavedra",
@@ -23,9 +17,9 @@
     {
       "id": "1",
       "title": "Programador Web Full Stack",
-      "career":"Programación Web",
+      "career": "Programación Web",
       "school": "Argentina Programa",
-      "score":"0",
+      "score": "0",
       "start": "2021",
       "end": "2022"
     },
@@ -36,31 +30,27 @@
       "career": "Fundamentos de Programación",
       "score": "100",
       "start": "2021",
-      "end":"2021"
+      "end": "2021"
     },
     {
       "id": "3",
       "title": "Profesor Nac. de Ed. Física",
       "school": "Instituto Frederic Chopin",
-      "career":"Profesorado de Ed. Física",
-      "score":"100",
+      "career": "Profesorado de Ed. Física",
+      "score": "100",
       "start": "2006",
-      "end":"2009"
+      "end": "2009"
     },
     {
       "id": "4",
       "title": "Bachiller",
       "school": "Inst. Don Quijote de la Mancha",
-      "career":"Bachiller en Economia y Gestión de las Organizaciones",
+      "career": "Bachiller en Economia y Gestión de las Organizaciones",
       "start": "2003",
       "end": "2005"
     }
   ],
   "skill": [
-    {
-      "id": "1",
-      "skill": "Responsabilidad"
-    },
     {
       "id": "2",
       "skill": "Resolución de Problemas"
@@ -77,7 +67,7 @@
   "acercaDe": [
     {
       "id": "1",
-      "texto": "Programador Web Full Stack"
+      "texto": "Programador Web Full Stack & Docente"
     }
   ]
 }

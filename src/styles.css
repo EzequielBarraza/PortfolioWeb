@@ -13,11 +13,7 @@
   }
   
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+ 
   
   html {
     box-sizing: border-box;
@@ -83,22 +79,24 @@
     display: block;
     width: 100%;
   }
-   /* unvisited link */
+  
 a:link {
   color: var(--main-white);
 }
 
-/* visited link */
+
 a:visited {
   color: var(--main-white);
 }
 
-/* mouse over link */
+
 a:hover {
   color: var(--main-gray);
 }
+span:hover {
+  color: var(--main-gray);
+}
 
-/* selected link */
 a:active {
   color: var(--main-gray);
 }

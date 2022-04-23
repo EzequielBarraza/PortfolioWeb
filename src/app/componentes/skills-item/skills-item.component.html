@@ -1,8 +1,12 @@
 <div class="Skills-grid">
   <ul>
   <li><p>{{skill.skill}}      
-    <fa-icon [icon]="faTimes" 
-    [ngStyle]="{'color':'var(--main-red)','cursor':'pointer'}"
-    (click)="onDelete(skill)"></fa-icon>
-  </p>
+    <span><a href="/skills" class="btn-right"><i class="fa fa-pen"
+      onclick="showNewAptModal()"></i></a></span>
+      <span class="btn-edit" class="btn-right"><i [ngStyle]="{'padding':'1rem','cursor':'pointer'}" class="fa fa-trash"
+        (click)="onDelete(skill)"></i></span>
+        </p><div class="progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 97%"
+            aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
     

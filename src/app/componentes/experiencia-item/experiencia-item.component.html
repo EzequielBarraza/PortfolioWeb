@@ -1,7 +1,9 @@
 <div class="experiencia"><p >{{experiencia.cargo}}. 
     {{experiencia.institucion}}. 
     {{experiencia.periodo}}  
-    <fa-icon [icon]="faTimes" 
-    [ngStyle]="{'color':'var(--main-red)','cursor':'pointer'}"
-    (click)="onDelete(experiencia)"></fa-icon></p>
+    <span><a href="/experiencia" class="btn-right"><i class="fa fa-pen"
+              onclick="showEditExpModal('Pixar')"></i></a></span>
+              <span class="btn-edit" class="btn-right"><i [ngStyle]="{'padding':'1rem','cursor':'pointer'}" class="fa fa-trash"
+                (click)="onDelete(experiencia)"></i></span>
+                </p>
 </div>
