@@ -13,15 +13,10 @@ import {ProyectosComponent} from './componentes/proyectos/proyectos.component'
 
 const routes: Routes = [
   
-  {path: 'navbar', component: NavbarComponent},
+  
   {path: 'login', component: LoginComponent},
   {path: 'home', component: PortfolioComponent},
-  {path: 'acerca_de', component: Acerca_DeComponent},
-  {path: 'proyectos', component: ProyectosComponent},
-  {path: 'experiencia', component: ExperienciaComponent},
-  {path: 'educación', component: EducacionComponent},
-  {path: 'skills', component: SkillsComponent},
-  {path: 'footer', component: FooterComponent},
+ 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
  

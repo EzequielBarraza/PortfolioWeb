@@ -9,16 +9,15 @@ import { LoginDto } from '../data/LoginDto';
   providedIn: 'root'
 })
 export class AuthService {
-
+  
   constructor(private http: HttpClient) { }
 
-  public login(credentials: LoginDto) : Observable<Boolean> {
+  public login(credentials:LoginDto) : Observable<Boolean> {
     return this.http.post<Boolean>(config.baseUrl + "login", credentials).pipe(
-      tap((data: Boolean) => {
-        if (data)
+      tap((response: Boolean) => {
+        if (response)
           sessionStorage.setItem("user", "12345678");
-      }
-      )
+      })
     );
   }
 

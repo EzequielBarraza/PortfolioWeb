@@ -4,21 +4,7 @@
   
     <ul id="nav-list" class="nav-list">
       <li class="logo"><a class="navbar-brand" href="#"><img class="logoAP" src="assets/img/APLogo.png" alt="argpprod" ></a>
-      <li>
-        <a routerLink="./acerca_de">Acerca de...</a>
-      </li>
-      <li>
-        <a routerLink="./experiencia">Experiencia</a>
-      </li>
-      <li>
-        <a routerLink="./educación">Educación</a>
-      </li>
-      <li>
-        <a routerLink="./skills">Skills</a>
-      </li>
-      <li>
-        <a routerLink="./proyectos">Proyectos</a>
-      </li>
+  
       <li><button *ngIf="!isUserLogged" class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">Login</button>
         <button *ngIf="isUserLogged" class="btn btn-outline-success my-2 my-sm-0" routerLink="/logout" (click)="logout()">Logout</button></li>
     </ul>
