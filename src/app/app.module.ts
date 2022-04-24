@@ -14,10 +14,10 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ExperienciaItemComponent } from './componentes/experiencia-item/experiencia-item.component';
 import { ButtonComponent } from './componentes/button/button.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { EducacionItemComponent } from './componentes/educacion-item/educacion-item.component';
+
 import { SkillsItemComponent } from './componentes/skills-item/skills-item.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
-import { AddEducacionComponent } from './componentes/add-educacion/add-educacion.component';
+
 import { AddExperienciaComponent } from './componentes/add-experiencia/add-experiencia.component';
 import { AddSkillComponent } from './componentes/add-skill/add-skill.component';
 import { AcercaDeItemComponent } from './componentes/acerca-de-item/acerca-de-item.component';
@@ -37,10 +37,10 @@ import { PortfolioComponent } from './componentes/portfolio/portfolio.component'
     LoginComponent,
     ExperienciaItemComponent,
     ButtonComponent,
-    EducacionItemComponent,
+  
     SkillsItemComponent,
     ProyectosComponent,
-    AddEducacionComponent,
+    
     AddExperienciaComponent,
     AddSkillComponent,
     AcercaDeItemComponent,

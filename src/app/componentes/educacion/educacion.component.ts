@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Educacion} from "../../data/Educacion"
-import {UiService} from 'src/app/servicios/ui.service'
-import { Subscription } from 'rxjs';
-import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
+import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Educacion } from 'src/app/data/Educacion';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-educacion',
@@ -10,34 +10,94 @@ import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacion :Educacion [] = [];
-titulo: string ='Educación';
-showAddEducacion: boolean = false;
-  subscription?: Subscription;
-  constructor(private uiService : UiService,
-    
-    private datosPortfolioService: DatosPortfolioService
-  ) {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddEducacion = value) }
+  educacionList: Educacion[] = [];
+  isUserLogged: Boolean = false;
+
+  educationForm: FormGroup;
+
+  constructor(
+    private porfolioService: PortfolioService,
+    private authService: AuthService,
+    private formBuilder: FormBuilder) {
+      this.educationForm = this.formBuilder.group({
+          id: [''],
+          school: ['', [Validators.required]],
+          title: ['', [Validators.required]],
+          score: ['', [Validators.required]],
+          
+        });
+   }
 
   ngOnInit(): void {
-    //Like Promise
-    this.datosPortfolioService.getEducacion().subscribe((educacion) => (this.educacion = educacion));
+    this.isUserLogged = this.authService.isUserLogged();
+    
+    this.reloadData();
   }
-toggleAddEducacion(){
-  console.log("toggleaddeducacion");
-  this.uiService.toggleAddEducacion();
-}
-deleteEducacion(educacion: Educacion){
-  this.datosPortfolioService.deleteEducacion(educacion)
-  .subscribe(
-    () => (
-    this.educacion = this.educacion.filter((t) => {
-    return t.id !== educacion.id })
-  ))
-}
-addEducacion(educacion:Educacion) {
-  this.datosPortfolioService.addEducacion(educacion).subscribe((educacion) => ( this.educacion.push(educacion)
-  ))
- }
+
+  private reloadData() {
+    this.porfolioService.obtenerDatosEducacion().subscribe(
+      (data) => {
+        this.educacionList = data;
+      }
+    );
+  }
+
+  private clearForm() {
+    this.educationForm.setValue({
+      id: '',
+      school: '',
+      title: '',
+      score: 0
+      
+    })
+  }
+
+  private loadForm(educacion: Educacion) {
+    this.educationForm.setValue({
+      id: educacion.id,
+      school: educacion.school,
+      title: educacion.title,
+      score: educacion.score,
+      
+    })
+  }
+
+  onSubmit() {
+    let educacion: Educacion = this.educationForm.value;
+    if (this.educationForm.get('id')?.value == '') {
+      this.porfolioService.guardarNuevaEducacion(educacion).subscribe(
+        (newEducation: Educacion) => {
+          this.educacionList.push(newEducation);
+        }
+      );
+    } else {
+      this.porfolioService.modificarEducacion(educacion).subscribe(
+        () => {
+          this.reloadData();
+        }
+      )
+    }
+  }
+
+  onNewEducation() {
+    this.clearForm();
+  }
+
+  onEditEducation(index: number) {
+    let educacion: Educacion = this.educacionList[index];
+    this.loadForm(educacion);
+  }
+
+  onDeleteEducation(index: number) {
+    let educacion: Educacion = this.educacionList[index];
+    if (confirm("¿Está seguro que desea borrar la educación seleccionada?")) {
+      this.porfolioService.borrarEducacion(educacion.id).subscribe(
+        () => {
+          this.reloadData();
+        }
+      )
+    }
+  }
 
 }
+
