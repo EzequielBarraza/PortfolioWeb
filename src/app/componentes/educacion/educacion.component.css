@@ -7,7 +7,7 @@
   
   margin-right: 2em;
   width: 100%;
-  height: 110vh;
+  height: 150vh;
 }
 
 h2 {
@@ -18,8 +18,11 @@ h2 {
   margin-bottom: 0.5em;
   border-bottom: 0.2rem solid var(--main-white);
 }
-#educación{margin-bottom: -2em;}
+#educación{margin-bottom: 2em;}
 
 i {
   color: var(--main-white);
+}
+
+#eduList {margin-bottom:4em;
 }

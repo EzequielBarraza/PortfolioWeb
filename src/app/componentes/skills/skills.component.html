@@ -1,18 +1,25 @@
 
-<section id="skills" class="skills-section">
-  <br><br>
-  <h2 class="skills-section-header">{{title}}</h2>
-
-  <app-skills-item *ngFor="let skill of skill"
-  [skill]="skill"
-  (onDeleteSkill)="deleteSkill(skill)"></app-skills-item>
+<section id="Skills" class="Skills-section">
   
-    <app-button  color="{{showAddSkill ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
-    text="{{showAddSkill ? 'Cerrar' : 'Añadir Skill'}}" text="Añadir Skill"
-    (btnClick)="toggleAddSkill()"
-    ></app-button>
-    <app-add-skill
-(onAddSkill) = "addSkill($event)"
-></app-add-skill>
-      </section>
+  <h2 class="Skills-section-header">{{title}}</h2>
+  <div class="Skills-grid">
+<ul>
+<li>{{skillA}}
+  <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</li>
+<li>{{skillB}}
+  <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</li>
+<li>{{skillC}}
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</li>
+</ul>
+
+  </div>
     

@@ -1,4 +1,4 @@
-.skills-section {
+#Skills {
   text-align: center;
   padding: 10rem 2rem;
   background-color: #000;
@@ -7,7 +7,7 @@
   height: 90vh;
 }
 
-.skills-section-header {
+.Skills-section-header {
   max-width: 640px;
   margin: 0 auto 6rem auto;
   margin-top: 0em;
