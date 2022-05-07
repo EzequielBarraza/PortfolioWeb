@@ -16,10 +16,10 @@
     font-size: 3rem;
     font-weight: 100;
     font-style: italic;
-    margin-top:4em;
+    margin-top:2em;
     padding: 4em 0em 2em 2em;
     background: var(--main-grayDark);
-    
+    height: 110vh;
   }
 
 #btn-login{

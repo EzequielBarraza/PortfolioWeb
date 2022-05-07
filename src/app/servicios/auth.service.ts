@@ -16,7 +16,7 @@ export class AuthService {
     return this.http.post<Boolean>(config.baseUrl + "login", credentials).pipe(
       tap((response: Boolean) => {
         if (response)
-          sessionStorage.setItem("user", "famendola");
+          sessionStorage.setItem("user", "ezequielbarraza@live.com");
       })
     );
   }
