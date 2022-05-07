@@ -1,22 +1,86 @@
-<section id="experiencia" class="experiencia-section">
-  <br><br>
-  <h2 class="experiencia-section-header">{{title}}</h2>
-    <div>
- <app-experiencia-item
- *ngFor="let experiencia of experiencia"
-      [experiencia]="experiencia"
-      (onDeleteExperiencia)="deleteExperiencia(experiencia)"
- ></app-experiencia-item>
- <app-button color="{{showAddExperiencia ? 'var(--main-red' : 'var(--main-SkyBlue)'}}" 
- text="{{showAddExperiencia ? 'Cerrar' : 'Añadir Experiencia'}}" text="Añadir Experiencia" 
-    text="Añadir Experiencia Laboral"
-    (btnClick)="toggleAddExperiencia()"
-    ></app-button>
-    
-    <app-add-experiencia
-(onAddExperiencia) = "addExperiencia($event)"
-></app-add-experiencia>
+<div id="experiencia">
+  <!-- Modal -->
+  <div class="modal fade" id="experienciaForm" tabindex="-1" aria-labelledby="experienciaFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="experienciaFormLabel">Experiencia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="experienciaForm" (ngSubmit)="onSubmit()">
+            <input type="hidden" name="id" formControlName="id">
+
+            <div class="row mb-3">
+              <label for="cargo" class="col-sm-2 col-form-label">Cargo</label>
+              <div class="col-sm-10">
+                <input type="text" name="cargo" formControlName="cargo" class="form-control" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="institucion" class="col-sm-2 col-form-label">Institución</label>
+              <div class="col-sm-10">
+                <input type="text" name="institucion" formControlName="institucion" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="title" class="col-sm-2 col-form-label">Periodo</label>
+              <div class="col-sm-10">
+                <input type="text" name="periodo" formControlName="periodo" class="form-control" required>
+              </div>
+            </div>
+
+  
+           
+           
+
+            <div class="text-center">
+              <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+
+  <div class="card-titles">
+    <h2>Experiencia</h2>
+    <div *ngIf="isUserLogged" class="btn-edit">
+      <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onNewExperiencia()"><i class="fa fa-plus"></i></button>
+    </div>
+  </div>
+  <div>
+    <ul class="items-list" id="expList">
+      <li *ngFor="let experiencia of experienciaList; let i = index">
+        <div class="data-container">
+          <a href="#">
+    
+            <div class="list-info">
+              <div>
+                <h3 id="exp-school">{{ experiencia.cargo }} </h3>
+                <p><span id="exp-title">{{ experiencia.institucion }}</span>, <span id="exp-career">{{ experiencia.periodo
+                    }}</span>,
+                 
+              </div>
+            </div>
+          </a>
+        </div>
+        <div *ngIf="isUserLogged" class="data-control">
+          <div class="btn-edit">
+            <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#experienciaForm" (click)="onEditExperiencia(i)"><i class="fa fa-pen"></i></button>
+          </div>
+          <div class="btn-edit">
+            <button class="btn btn-right" (click)="onDeleteExperiencia(i)"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
     
 
  

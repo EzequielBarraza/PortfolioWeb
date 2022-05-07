@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Experiencia} from "../../data/Experiencia";
-import {DatosPortfolioService} from "../../servicios/datos-portfolio.service";
-import {UiService} from 'src/app/servicios/ui.service'
-import { Subscription } from 'rxjs';
+import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { AuthService } from 'src/app/servicios/auth.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 
  @Component({
@@ -11,33 +12,95 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencia: Experiencia[] = [];
-  title: string ='Experiencia Laboral';
-  showAddExperiencia: boolean = false;
-  subscription?: Subscription;
+  experienciaList: Experiencia[] = [];
+  isUserLogged: Boolean = false;
+
+  experienciaForm: FormGroup;
    
-  constructor(private uiService : UiService,
-    private datosPortfolioService: DatosPortfolioService) 
-    {this.subscription = this.uiService.onToggle().subscribe(value => this.showAddExperiencia = value) }
-  ngOnInit(): void {
-    //Like Promise
-    this.datosPortfolioService.getExperiencia().subscribe((experiencia) => (this.experiencia = experiencia));
-  }
-  toggleAddExperiencia(){
-    console.log("toggleaddexperiencia");
-    this.uiService.toggleAddExperiencia();
-  }
-  deleteExperiencia(experiencia: Experiencia){
-    this.datosPortfolioService.deleteExperiencia(experiencia)
-    .subscribe(
-      () => (
-      this.experiencia = this.experiencia.filter((t) => {
-      return t.id !== experiencia.id })
-    ))
-  }
-  addExperiencia(experiencia: Experiencia) {
-    this.datosPortfolioService.addExperiencia(experiencia).subscribe((experiencia) => ( this.experiencia.push(experiencia)
-    ))
+  constructor(private porfolioService: PortfolioService,
+    private authService: AuthService,
+    private formBuilder: FormBuilder) {
+      this.experienciaForm = this.formBuilder.group({
+          id: [''],
+          cargo: ['', [Validators.required]],
+          institucion: ['', [Validators.required]],
+          periodo: ['', [Validators.required]],
+          
+        });
    }
-  
+  ngOnInit(): void {
+    this.isUserLogged = this.authService.isUserLogged();
+    
+    this.reloadData();
+  }
+
+  private reloadData() {
+    this.porfolioService.obtenerDatosExperiencia().subscribe(
+      (data) => {
+        this.experienciaList = data;
+      }
+    );
+  }
+
+  private clearForm() {
+    this.experienciaForm.setValue({
+      id: '',
+      cargo: '',
+      institucion: '',
+      periodo: '', 
+      
+      
+    })
+  }
+
+  private loadForm(experiencia: Experiencia) {
+    this.experienciaForm.setValue({
+      id: experiencia.id,
+      cargo: experiencia.cargo,
+      institucion: experiencia.institucion,
+      periodo: experiencia.periodo,
+     
+      
+    })
+  }
+
+  onSubmit() {
+    let experiencia: Experiencia = this.experienciaForm.value;
+    if (this.experienciaForm.get('id')?.value == '') {
+      this.porfolioService.guardarNuevaExperiencia(experiencia).subscribe(
+        (newExperiencia: Experiencia) => {
+          this.experienciaList.push(newExperiencia);
+        }
+      );
+    } else {
+      this.porfolioService.modificarExperiencia(experiencia).subscribe(
+        () => {
+          this.reloadData();
+        }
+      )
+    }
+  }
+
+  onNewExperiencia() {
+    this.clearForm();
+  }
+
+  onEditExperiencia(index: number) {
+    let experiencia: Experiencia = this.experienciaList[index];
+    this.loadForm(experiencia);
+  }
+
+  onDeleteExperiencia(index: number) {
+    let experiencia: Experiencia = this.experienciaList[index];
+    if (confirm("¿Está seguro que desea borrar la educación seleccionada?")) {
+      this.porfolioService.borrarExperiencia(experiencia.id).subscribe(
+        () => {
+          this.reloadData();
+        }
+      )
+    }
+  }
+
 }
+
+

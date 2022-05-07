@@ -1,18 +1,29 @@
-.experiencia-section {
+#experiencia {
   text-align: center;
-  padding: 10rem 2rem;
+
   background-color: #000;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  margin-top: -2em;
+  
+  margin-right: 2em;
   width: 100%;
-  height: 90vh;
-  margin-top: 0em;
+  height: 150vh;
 }
 
-.experiencia-section-header {
+h2 {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  margin-top: 0em;
-  margin-bottom: 2.0em;
+  margin-top: 0.5em;
+  padding-top:1.5em;
+  margin-bottom: 0.5em;
   border-bottom: 0.2rem solid var(--main-white);
+}
+#experiencia{margin-bottom: 0em;}
+
+i {
+  color: var(--main-white);
+}
+
+#expList {margin-bottom:4em;
 }
 
