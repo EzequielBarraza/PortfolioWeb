@@ -24,7 +24,8 @@ export class EducacionComponent implements OnInit {
           school: ['', [Validators.required]],
           title: ['', [Validators.required]],
           score: ['', [Validators.required]],
-          
+          start: ['', [Validators.required]],
+          end: ['', [Validators.required]],
         });
    }
 
@@ -47,7 +48,9 @@ export class EducacionComponent implements OnInit {
       id: '',
       school: '',
       title: '',
-      score: 0
+      score: 0,
+      start: '', 
+      end: '',
       
     })
   }
@@ -58,6 +61,8 @@ export class EducacionComponent implements OnInit {
       school: educacion.school,
       title: educacion.title,
       score: educacion.score,
+      start: educacion.start,
+      end: educacion.end,
       
     })
   }
